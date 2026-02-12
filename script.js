@@ -111,42 +111,6 @@ function renderProjects() {
   });
 }
 
-// Render resources from resourcesData
-function renderResources() {
-  const container = document.getElementById("resources-container");
-  if (!container || !Array.isArray(resourcesData)) return;
-
-  container.innerHTML = "";
-
-  resourcesData.forEach((resource) => {
-    const card = document.createElement("article");
-    card.className = "resource-card";
-
-    const title = document.createElement("h3");
-    title.textContent = resource.title;
-
-    const description = document.createElement("p");
-    description.textContent = resource.description || "";
-
-    card.appendChild(title);
-    card.appendChild(description);
-
-    if (resource.link) {
-      const link = document.createElement("a");
-      link.href = resource.link;
-      link.textContent = "View resource";
-      // allow intra-page anchors or external links
-      if (resource.link.startsWith("http")) {
-        link.target = "_blank";
-        link.rel = "noopener";
-      }
-      card.appendChild(link);
-    }
-
-    container.appendChild(card);
-  });
-}
-
 // Scroll reveal for sections
 function initScrollReveal() {
   const revealSections = document.querySelectorAll(".section.reveal");
@@ -185,11 +149,30 @@ function initNavbarScroll() {
   handleScroll();
 }
 
+// Hero parallax accent
+function initHeroParallax() {
+  const hero = document.querySelector(".hero");
+  const accent = document.querySelector(".hero-accent");
+  if (!hero || !accent) return;
+
+  hero.addEventListener("mousemove", (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    accent.style.transform = `translate3d(${x * 30}px, ${y * 30}px, 0)`;
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    accent.style.transform = "translate3d(0, 0, 0)";
+  });
+}
+
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
   renderProjects();
-  renderResources();
   initScrollReveal();
   initNavbarScroll();
+  initHeroParallax();
 });

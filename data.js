@@ -88,31 +88,3 @@ const projectsData = [
   },
 ];
 
-// Resources for the resources section
-const resourcesData = [
-  {
-    title: "Full-Stack Starter Template",
-    description:
-      "Minimal full-stack starter layout with Node.js, Express, and a clean client structure.",
-    link: "#",
-  },
-  {
-    title: "API Development Checklist",
-    description:
-      "Practical checklist for building secure, well-documented REST APIs.",
-    link: "#",
-  },
-  {
-    title: "Portfolio Boilerplate",
-    description:
-      "Lightweight portfolio structure designed for quick customization and deployment.",
-    link: "#",
-  },
-  {
-    title: "Automation Script Collection",
-    description:
-      "Utility scripts for deployment, backups, and repetitive development tasks.",
-    link: "#",
-  },
-];
-

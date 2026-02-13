@@ -1,3 +1,5 @@
 This is my portfolio folder
 this is a new line
 third line
+
+WE Have added a zip animation In front page

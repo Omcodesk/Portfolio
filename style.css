@@ -226,3 +226,66 @@ body {
     font-size: 18px;
   }
 }
+
+/* ===== INTRO OVERLAY ===== */
+
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  overflow: hidden;
+  animation: fadeOut 1.4s ease forwards;
+  animation-delay: 1.4s;
+}
+
+/* Lightning subtle effect */
+.lightning-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(37,99,235,0.4), transparent 40%),
+              radial-gradient(circle at 70% 60%, rgba(37,99,235,0.3), transparent 40%);
+  animation: lightningMove 1.2s ease-in-out infinite alternate;
+  filter: blur(40px);
+}
+
+/* Moving zip line */
+.zip-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  animation: zipReveal 1.4s ease forwards;
+}
+
+@keyframes zipReveal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes lightningMove {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(-20px) translateY(-20px);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+

@@ -12,3 +12,11 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+// Intro Animation Control
+window.addEventListener("load", () => {
+  const overlay = document.querySelector(".intro-overlay");
+
+  setTimeout(() => {
+    overlay.classList.add("reveal");
+  }, 800);
+});

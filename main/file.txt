@@ -7,3 +7,4 @@ Also a interacticve card to show projects info
 Info aniamtion update
 Some key functionalities
 Advance adnimations info
+New features Click

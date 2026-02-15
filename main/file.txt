@@ -5,3 +5,4 @@ third line
 WE Have added a zip animation In front page
 Also a interacticve card to show projects info
 Info aniamtion update
+Some key functionalities

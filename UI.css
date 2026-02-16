@@ -1,0 +1,109 @@
+/* ===============================
+   TYPOGRAPHY SYSTEM
+================================ */
+
+.hero h2 {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.section {
+  padding: 100px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ===============================
+   NAVBAR ENHANCEMENT
+================================ */
+
+.navbar {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   PROJECT CARD UPGRADE
+================================ */
+
+.project-card {
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   SKILL TAG POLISH
+================================ */
+
+.skill-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #e2e8f0;
+  margin: 5px;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
